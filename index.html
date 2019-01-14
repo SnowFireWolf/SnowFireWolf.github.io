@@ -27,11 +27,11 @@
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <!-- css-->
-<link href="/css/reset.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 <link href="/css/style.css?00000009" rel="stylesheet">
 <script src="/js/particles.min.js"></script>
 <script src="/js/script.js?00000001"></script>
+<script src="/js/anime.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
 <body style="font-family:rubik-regular">
@@ -48,7 +48,7 @@
     </div>
 
     <div id="contact">
-		<div class="header">
+		<div id="contact-icon" class="header">
 			<div class="icon">
 				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 563.43 563.43" style="enable-background:new 0 0 563.43 563.43;" xml:space="preserve" width="48px" height="48px">
 					<path d="M280.79,314.559c83.266,0,150.803-67.538,150.803-150.803S364.055,13.415,280.79,13.415S129.987,80.953,129.987,163.756  S197.524,314.559,280.79,314.559z M280.79,52.735c61.061,0,111.021,49.959,111.021,111.021S341.851,274.776,280.79,274.776  s-111.021-49.959-111.021-111.021S219.728,52.735,280.79,52.735z" fill="#FFFFFF"></path>
@@ -75,6 +75,10 @@
 				<i class="fab fa-instagram"></i>
 	        	<div class="name">Instagram</div>
 	    	</a>
+			<a class="button-item" href="https://www.twitter.com/snowfirewolf" target="_blank">
+				<i class="fab fa-twitter"></i>
+	        	<div class="name">Twitter</div>
+	    	</a>
 		</div>
     </div>
 
@@ -91,35 +95,35 @@
 		<div class="items">
 			<div class="button-item"><i class="devicon-html5-plain"></i>
 				<div class="name">HTML5</div>
-				<div class="skilled">87%</div>
+				<div id="html5" class="skilled">0%</div>
 			</div>
 			<div class="button-item"><i class="devicon-css3-plain"></i>
 				<div class="name">CSS3</div>
-				<div class="skilled">87%</div>
+				<div id="css3" class="skilled">0%</div>
 			</div>
 			<div class="button-item"><i class="devicon-php-plain"></i>
 				<div class="name">PHP</div>
-				<div class="skilled">38%</div>
+				<div id="php" class="skilled">0%</div>
 			</div>
 			<div class="button-item"><i class="devicon-nodejs-plain"></i>
 				<div class="name">nodeJS</div>
-				<div class="skilled">5%</div>
+				<div id="nodejs" class="skilled">0%</div>
 			</div>
 			<div class="button-item"><i class="devicon-javascript-plain"></i>
 				<div class="name">Javascript</div>
-				<div class="skilled">35%</div>
+				<div id="javascript" class="skilled">0%</div>
 			</div>
 			<div class="button-item"><i class="devicon-jquery-plain"></i>
 				<div class="name">JQuery</div>
-				<div class="skilled">65%</div>
+				<div id="jquery" class="skilled">0%</div>
 			</div>
 			<div class="button-item"><i class="devicon-photoshop-plain"></i>
 				<div class="name">Photoshop</div>
-				<div class="skilled">60%</div>
+				<div id="photoshop" class="skilled">0%</div>
 			</div>
 			<div class="button-item"><i class="devicon-illustrator-plain"></i>
 				<div class="name">illustrator</div>
-				<div class="skilled">65%</div>
+				<div id="illustrator" class="skilled">0%</div>
 			</div>
 		</div>
 	</div>
@@ -144,8 +148,71 @@
 	</div>
 
 	<div id="footer">
-		<p>SnowFireWolf 2019</p>
+		<p>SnowFireWolf <span  id="Ynumber">0</span></p>
 		<p>Some icons made by <a href="https://www.flaticon.com/authors/lucy-g" title="Lucy G" target="_blank">Lucy G</a> from <a href="https://www.flaticon.com/" title="Flaticon" target="_blank">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
 	</div>
+
+  <script>
+var icon = anime({
+  targets: '#contact-icon',
+  translateX: [-100, 0], // Translate X from 100 to 200
+  scale: ['*=2', 1], // Scale from 2 times the original value to 1,
+  duration: 1500
+});
+var Ynumber = anime({
+  targets: '#Ynumber',
+  innerHTML: 2019,
+  round: 1,
+  easing: 'easeInOutExpo'
+});
+var html5 = anime({
+  targets: '#html5',
+  innerHTML: '87%',
+  round: 1,
+  easing: 'easeInOutExpo'
+});
+var css3 = anime({
+  targets: '#css3',
+  innerHTML: '87%',
+  round: 1,
+  easing: 'easeInOutExpo'
+});
+var php = anime({
+  targets: '#php',
+  innerHTML: '38%',
+  round: 1,
+  easing: 'easeInOutExpo'
+});
+var nodejs = anime({
+  targets: '#nodejs',
+  innerHTML: '8%',
+  round: 1,
+  easing: 'easeInOutExpo'
+});
+var javascript = anime({
+  targets: '#javascript',
+  innerHTML: '35%',
+  round: 1,
+  easing: 'easeInOutExpo'
+});
+var jquery = anime({
+  targets: '#jquery',
+  innerHTML: '65%',
+  round: 1,
+  easing: 'easeInOutExpo'
+});
+var photoshop = anime({
+  targets: '#photoshop',
+  innerHTML: '51%',
+  round: 1,
+  easing: 'easeInOutExpo'
+});
+var illustrator = anime({
+  targets: '#illustrator',
+  innerHTML: '55%',
+  round: 1,
+  easing: 'easeInOutExpo'
+});
+  </script>
 </body>
 </html>
