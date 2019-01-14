@@ -12,6 +12,11 @@
     font-style: normal;
 }
 
+::selection {
+    background: #AAAAAA;
+    color: #fff;
+}
+
 body {
     font-size:16px;
     background-color: #221405;
@@ -163,7 +168,7 @@ a.button-item{
 }
 
 .button-item:active {
-    transform:scale(0.8);
+    transform:scale(0.85);
 }
 
 .button-item:hover i{
@@ -172,6 +177,22 @@ a.button-item{
 
 .button-item:hover img{
     opacity:1;
+}
+
+.button-item:hover .fa-facebook{
+    color: #3C5A99;
+}
+
+.button-item:hover .fa-telegram{
+    color: #0088cc;
+}
+
+.button-item:hover .fa-instagram{
+    color: #e95950;
+}
+
+.button-item:hover .fa-twitter{
+    color: #1da1f2;
 }
 
 @media(max-width:700px){
