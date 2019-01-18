@@ -1,3 +1,4 @@
+/* © SnowFireWolf 2019 */
 @font-face {
     font-family: 'rubik-regular';
     src: url('/fonts/Rubik-Regular.ttf');
@@ -12,14 +13,33 @@
     font-style: normal;
 }
 
+/*前置作業*/
 ::selection {
     background: #AAAAAA;
     color: #fff;
 }
 
+
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius:10px;
+}
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin:80px 0 5px 0;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background: rgb(219,219,219);
+}
+
 body {
     background-color: #221405;
     color: #FFFFFF;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 #particles-js{
@@ -129,10 +149,12 @@ body {
     font-weight: 400;
     transition:all .1s linear;
     border-radius:5px;
+    cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    display: inline-block;
     -webkit-transition-duration: 0.05s; /* Safari */
     transition-duration: 0.05s;
 }
@@ -175,6 +197,12 @@ body {
     font-weight:400;
     transition:all .1s linear;
     border-radius:5px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: inline-block;
     -webkit-transition-duration: 0.05s; /* Safari */
     transition-duration: 0.05s;
 }
@@ -284,7 +312,11 @@ a.button-item{
     line-height:1.25em;
 }
 
-/*Test css*/
+/* Modal */
+.modal-open {
+  overflow: hidden;
+}
+
 .modal-background {
   bottom: 0;
   left: 0;
@@ -300,31 +332,37 @@ a.button-item{
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
+  transition: opacity 1000ms;
   visibility: hidden;
+  display: hidden;
   opacity: 0;
-  overflow: hidden;
   padding: 0.625rem 0rem 0rem 0rem;
 }
 
 .modal:target {
   visibility: visible;
+  display: show;
   opacity: 1;
 }
 
 .modal .basic {
-  background-color: transparent;
-  border: none;
-  border-radius: 0em;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  color: #FFFFFF;
-}
-
-.modal .box{
   color: #FFF;
   margin: 70px auto;
-  margin-top: 150px;
+  margin-top: calc(10vh);
+  padding: 20px;
+  background-color: transparent;
+  border: none;
+  border-radius: none;
+  width: 40%;
+  position: relative;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.modal .card{
+  color: #FFF;
+  margin: 70px auto;
+  margin-top: 2em;
   padding: 20px;
   border:2px solid #AAAAAA;
   border-radius: 5px;
@@ -347,13 +385,21 @@ a.button-item{
 .modal .close:hover {
   color: #06D85F;
 }
+
+.modal .header {
+    display: block;
+    margin-top: 0.5em;
+}
+
 .modal .content {
-  max-height: 30%;
-  overflow: auto;
+    margin-top: 1em;
+    max-height: calc(100vh - 300px);
+    overflow-y: auto;
+    padding: 1.5rem;
 }
 
 @media(max-width:700px){
-    .modal .box {
+    .modal .card {
         width: 70%;
     }
     .modal .basic{
@@ -365,164 +411,30 @@ a.button-item{
 .progress {
   -moz-appearance: none;
   -webkit-appearance: none;
-  border: 1px solid #FFF;
+  border: 2px solid #FFF;
   border-radius: 290486px;
   display: block;
-  height: 2rem;
+  height: 1rem;
   overflow: hidden;
   padding: 0;
   width: 100%;
 }
 
 .progress::-webkit-progress-bar {
-  //background-color: #dbdbdb;
   background-color: transparent;
 }
 
 .progress::-webkit-progress-value {
-  background-color: #4a4a4a;
+  background-color: #FFF;
 }
 
 .progress::-moz-progress-bar {
-  //background-color: #4a4a4a;
   background-color: transparent;
 }
 
 .progress::-ms-fill {
-  background-color: #4a4a4a;
+  background-color: #FFF;
   border: none;
-}
-
-.progress.is-white::-webkit-progress-value {
-  background-color: white;
-}
-
-.progress.is-white::-moz-progress-bar {
-  background-color: white;
-}
-
-.progress.is-white::-ms-fill {
-  background-color: white;
-}
-
-.progress.is-black::-webkit-progress-value {
-  background-color: #0a0a0a;
-}
-
-.progress.is-black::-moz-progress-bar {
-  background-color: #0a0a0a;
-}
-
-.progress.is-black::-ms-fill {
-  background-color: #0a0a0a;
-}
-
-.progress.is-light::-webkit-progress-value {
-  background-color: whitesmoke;
-}
-
-.progress.is-light::-moz-progress-bar {
-  background-color: whitesmoke;
-}
-
-.progress.is-light::-ms-fill {
-  background-color: whitesmoke;
-}
-
-.progress.is-dark::-webkit-progress-value {
-  background-color: #363636;
-}
-
-.progress.is-dark::-moz-progress-bar {
-  background-color: #363636;
-}
-
-.progress.is-dark::-ms-fill {
-  background-color: #363636;
-}
-
-.progress.is-primary::-webkit-progress-value {
-  background-color: #00d1b2;
-}
-
-.progress.is-primary::-moz-progress-bar {
-  background-color: #00d1b2;
-}
-
-.progress.is-primary::-ms-fill {
-  background-color: #00d1b2;
-}
-
-.progress.is-link::-webkit-progress-value {
-  background-color: #3273dc;
-}
-
-.progress.is-link::-moz-progress-bar {
-  background-color: #3273dc;
-}
-
-.progress.is-link::-ms-fill {
-  background-color: #3273dc;
-}
-
-.progress.is-info::-webkit-progress-value {
-  background-color: #209cee;
-}
-
-.progress.is-info::-moz-progress-bar {
-  background-color: #209cee;
-}
-
-.progress.is-info::-ms-fill {
-  background-color: #209cee;
-}
-
-.progress.is-success::-webkit-progress-value {
-  background-color: #23d160;
-}
-
-.progress.is-success::-moz-progress-bar {
-  background-color: #23d160;
-}
-
-.progress.is-success::-ms-fill {
-  background-color: #23d160;
-}
-
-.progress.is-warning::-webkit-progress-value {
-  background-color: #ffdd57;
-}
-
-.progress.is-warning::-moz-progress-bar {
-  background-color: #ffdd57;
-}
-
-.progress.is-warning::-ms-fill {
-  background-color: #ffdd57;
-}
-
-.progress.is-gray::-webkit-progress-value {
-  background-color: #AAAAAA;
-}
-
-.progress.is-gray::-moz-progress-bar {
-  background-color: #AAAAAA;
-}
-
-.progress.is-gray::-ms-fill {
-  background-color: #AAAAAA;
-}
-
-.progress.is-gray::-webkit-progress-value {
-  background-color: #AAAAAA;
-}
-
-.progress.is-gray::-moz-progress-bar {
-  background-color: #AAAAAA;
-}
-
-.progress.is-grayer::-ms-fill {
-  background-color: #AAAAAA;
 }
 
 .progress.is-small {
@@ -535,4 +447,17 @@ a.button-item{
 
 .progress.is-large {
   height: 1.5rem;
+}
+
+/******* Align ********/
+.text-center{
+    text-align:center;
+}
+
+.text-right{
+    text-align:right;
+}
+
+.text-left{
+    text-align:left;
 }
