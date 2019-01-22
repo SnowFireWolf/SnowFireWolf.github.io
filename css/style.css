@@ -400,10 +400,12 @@ a.button-item{
 
 @media(max-width:700px){
     .modal .card {
-        width: 70%;
+        width: 90%;
+        margin-top: 5vh;
     }
     .modal .basic{
-        width: 70%;
+        width: 90%;
+        margin-top: 5vh;
     }
 }
 
