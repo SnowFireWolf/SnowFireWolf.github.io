@@ -293,12 +293,6 @@ a.button-item{
     text-align:left;
 }
 
-@media(max-width:700px){
-    #works .button-item{
-        width:calc(100% - 44px)
-    }
-}
-
 #footer{
     padding:20px;
     text-align:center;
@@ -398,7 +392,10 @@ a.button-item{
     padding: 1.5rem;
 }
 
-@media(max-width:700px){
+@media(max-width:760px){
+    #works .button-item{
+        width:calc(100% - 44px)
+    }
     .modal .card {
         width: 90%;
         margin-top: 5vh;
