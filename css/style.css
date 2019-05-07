@@ -36,10 +36,33 @@
 }
 
 body {
-    background-color: #221405;
-    color: #FFFFFF;
+    background-color: #FFFFFF;
+    color: #000000;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.gradient-blue {
+    color: #FFF;
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+.gradient-green-blue {
+    background-image: linear-gradient(120deg, #2af598 0%, #009efd 100%);
+}
+
+.background {
+    position:fixed;
+    z-index:-9488;
+    width:100vw;
+    height:100vh;
+}
+
+.container {
+  display: grid | inline-grid;
+}
+
+.row {
+    display: grid;
 }
 
 #particles-js{
@@ -78,7 +101,7 @@ body {
     height:10em;
     border-radius:100%;
     box-shadow:0 2px 10px #0000001a;
-    background-image:linear-gradient(to right bottom,#ffa0b9,#ff9d95,#ffa768,#fcbb38,#c9d30e);
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
     transition:all .1s linear;
     animation:slideIn .4s ease;
     animation-delay:.4s;
@@ -95,6 +118,7 @@ body {
 }
 
 .header-card .content{
+    background-image: linear-gradient(120deg, #00C3FF 0%, #0077FF 100%);
     z-index:1;
     margin-top:.2em;
     max-width:500px;
@@ -102,7 +126,6 @@ body {
     margin:auto;
     margin-top:-200px;
     padding-bottom:30px;
-    border: 2px solid #FFFFFF;
     border-radius:20px;
     padding-top:210px;
     /*background-color:#ffffffe6;*/
@@ -112,11 +135,11 @@ body {
 
 .header-card .content .name{
     font-size:2em;
-    line-height:1.5em;
+    line-height:2.6em;
     text-align:center;
     font-weight:500;
     color:#FFFFFF;
-    text-shadow:0 0 3px #ffffff40
+    text-shadow:0 0 3px #ffffff40;
 }
 
 .header-card .content .info{
@@ -124,7 +147,7 @@ body {
     line-height:1.5em;
     text-align:center;
     font-weight:400;
-    color:#AAAAAA;
+    color: #FFFFFF;
     text-shadow:0 0 3px #ffffff40;
 }
 
@@ -135,40 +158,37 @@ body {
 }
 
 .button{
-    color: #FFFFFF;
+    margin: 0em 0.25em 0em 0em;
+    padding: 0.78571429em 1.5em 0.78571429em;
     display:flex;
     align-content:center;
     flex-direction:column;
-    margin: 0em 0.25em 0em 0em;
-    padding: 0.78571429em 1.5em 0.78571429em;
-    border:2px solid #FFF;
-    background-color: transparent;
+    width:calc(25% - 44px);
+    margin:10px;
     text-align:center;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 400;
+    padding:10px;
+    background-color: #FFFFFF9a;
+    font-weight:400;
     transition:all .1s linear;
-    border-radius:5px;
+    border: none;
+    border-radius: 12px;
+    box-shadow:0 2px 10px #0000001a;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
     display: inline-block;
-    -webkit-transition-duration: 0.05s; /* Safari */
-    transition-duration: 0.05s;
+    text-decoration: none;
+    -webkit-transition-duration: 0.1s; /* Safari */
+    transition-duration: 0.1s;
 }
 
 .button:hover {
-    color: #AAAAAA;
-    border:2px solid #AAAAAA;
-    text-decoration: none;
+    transform:scale(1.05);
 }
 
 .button:active {
-    color: #AAAAAA;
-    text-decoration: none;
-    border-radius:5px;
     transform:scale(0.9);
 }
 
@@ -191,31 +211,33 @@ body {
     flex-direction:column;
     width:calc(25% - 44px);
     margin:10px;
-    border:2px solid #DDDDDD;
     text-align:center;
     padding:10px;
+    background-color: #FFFFFF9a;
     font-weight:400;
     transition:all .1s linear;
-    border-radius:5px;
+    border-radius: 12px;
+    box-shadow:0 2px 10px #0000001a;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
     display: inline-block;
-    -webkit-transition-duration: 0.05s; /* Safari */
-    transition-duration: 0.05s;
+    -webkit-transition-duration: 0.1s; /* Safari */
+    transition-duration: 0.1s;
 }
 
 a.button-item{
     cursor:pointer;
     text-decoration:none;
-    color:#FFF;
+    color: #000000;
 }
 
 .button-item i{
     font-size:5em;
-    color:#DDDDDD;
+    color: #FFFFFF;
+    filter: opacity(0.9);
     -webkit-transition-duration: 0.2s; /* Safari */
     transition-duration: 0.2s;
 }
@@ -225,7 +247,9 @@ a.button-item{
     line-height:1.4em;
 }
 
-.button-item .skilled,.button-item .description{font-size:1em;line-height:1.4em;}
+.button-item .skilled,.button-item .description{
+    font-size:1em;line-height:1.4em;
+}
 
 .button-item img{
     width:100%;
@@ -235,15 +259,15 @@ a.button-item{
 }
 
 .button-item:hover{
-    border:2px solid #FFFFFF;
+    transform:scale(1.05);
 }
 
 .button-item:active {
-    transform:scale(0.85);
+    transform:scale(0.95);
 }
 
 .button-item:hover i{
-    color: #FFFFFF;
+    color: #2575fc;
 }
 
 .button-item:hover img{
@@ -251,7 +275,7 @@ a.button-item{
 }
 
 .button-item:hover .fa-facebook{
-    color: #3C5A99;
+    color: #1877F2;
 }
 
 .button-item:hover .fa-telegram{
@@ -259,13 +283,48 @@ a.button-item{
 }
 
 .button-item:hover .fa-instagram{
-    color: #e95950;
+    color: #FF833D;
 }
 
 .button-item:hover .fa-twitter{
     color: #1da1f2;
 }
 
+/*** card ***/
+.card {
+    color: #000000;
+    align-content:center;
+    margin:10px;
+    width:calc(100% - 44px);
+    text-align:left;
+    padding:10px;
+    background-color: #FFFFFF9a;
+    font-weight:400;
+    transition:all .1s linear;
+    border-radius: 12px;
+    box-shadow:0 2px 10px #0000001a;
+    display: inline-block;
+    -webkit-transition-duration: 0.1s; /* Safari */
+    transition-duration: 0.1s;
+    text-decoration:none;
+}
+
+.card img {
+    width:100%;
+    border-radius:5px;
+    margin-bottom:3px;
+    opacity:.9;
+}
+
+.card .name{
+    font-size:1.5em;
+    line-height:1.4em;
+}
+
+.button-item .description{
+    font-size:1em;
+    line-height:1.4em;
+}
 @media(max-width:700px){
     .items{width:100%}
     .button-item{width:calc(50% - 44px)}
@@ -299,7 +358,7 @@ a.button-item{
     line-height:1.25em
 }
 #footer a{
-    color:#AAAAAA
+    color: #e3e3e3;
 }
 #footer p:first-child{
     font-size:1.2em;
@@ -410,10 +469,10 @@ a.button-item{
 .progress {
   -moz-appearance: none;
   -webkit-appearance: none;
-  border: 2px solid #FFF;
+  border: 1px solid #FFF;
   border-radius: 290486px;
   display: block;
-  height: 1rem;
+  height: 20px;
   overflow: hidden;
   padding: 0;
   width: 100%;
@@ -424,7 +483,7 @@ a.button-item{
 }
 
 .progress::-webkit-progress-value {
-  background-color: #FFF;
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
 }
 
 .progress::-moz-progress-bar {
@@ -459,4 +518,12 @@ a.button-item{
 
 .text-left{
     text-align:left;
+}
+
+.float-right{
+    float: right;
+}
+
+.float-left{
+    float: left;
 }
