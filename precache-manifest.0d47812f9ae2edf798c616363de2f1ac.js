@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/uipack.e220de89.png"
   },
   {
-    "revision": "ce7c652f76e138a50629c863397cf201",
+    "revision": "52f7f279a71ac3665bf881a37c3eae92",
     "url": "/index.html"
   },
   {
@@ -36,7 +36,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/js/main.dff0894d.js"
   },
   {
-    "revision": "30b72dec334d36e35248c7be71540714",
+    "revision": "3e4c7235021fb0d97ad943d92f0157ad",
     "url": "/manifest.json"
   },
   {
