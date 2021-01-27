@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.9440a85c053abfe5db700c32642ba707.js"
+  "/precache-manifest.b02a3119ca8c63b1bc0eac2fb1bbf1dc.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "snow.io"});
